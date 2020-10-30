@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>project API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>project</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># File: project.py
+# Authors: Sapir Lastimoza-Dooley, Grant Tober, Tanner Hansard
+# Date: 05/05/2020
+# E-mails: sapirdooley@tamu.edu, gtober@tamu.edu, tanner_h@tamu.edu
+# Project Name: The Dealership Manager
+# Description: Program reads a data set in csv format, and analyzes it.
+# Then it generates the details of the data, a bar chart, two line charts,
+# and a pie chart.
+
+import csv
+import random
+import matplotlib.pyplot as plt; plt.rcdefaults()
+import matplotlib.patches as patches
+import numpy as np
+import pandas as pd  
+import datetime
+
+def seperateFile(path):
+    &#34;&#34;&#34;Takes path as input and seperates columns into seperate&#34;&#34;&#34;
+    with open(path, &#39;r&#39;) as csvfile:
+        data_file = csv.reader(csvfile)
+        
+        data_set = []
+        car_model = []
+        contract_date = []
+        car_brand = []
+        state = []
+        car_safety_rating = []
+        sales_amount = []
+        color = []
+        
+        for line in data_file:
+            data_set.append(line)
+            car_model.append(line[0])
+            contract_date.append(line[1])
+            car_brand.append(line[2])
+            state.append(line[3])
+            car_safety_rating.append(line[4])
+            sales_amount.append(line[5])
+            color.append(line[6])
+
+    return (data_set, car_model, contract_date, car_brand, state, car_safety_rating, sales_amount, color)
+
+def getUniqueModels(car_model):
+    &#34;&#34;&#34;Finds all unique models within csv and returns as list&#34;&#34;&#34;
+    unique_models = []
+    for model in car_model:
+        if model in unique_models:
+            pass
+        else:
+            unique_models.append(model)
+    num_models = len(unique_models) - 1
+    return(unique_models, num_models)
+
+def getUniqueBrands(car_brand):
+    &#34;&#34;&#34;Finds all unique car brands within csv and returns as list&#34;&#34;&#34;
+    unique_brands = []
+    for brand in car_brand:
+        if brand in unique_brands:
+            pass
+        else:
+            unique_brands.append(brand)
+    num_brands = len(unique_brands) - 1
+    return(unique_brands, num_brands)
+
+def getUniqueRatings(car_safety_rating):
+    &#34;&#34;&#34;Finds all unique ratings within csv and returns as list&#34;&#34;&#34;
+    unique_ratings = []    
+    for rating in car_safety_rating:
+        if rating in unique_ratings:
+            pass
+        else:
+            unique_ratings.append(rating)
+    num_ratings = len(unique_ratings) - 1
+    return(unique_ratings, num_ratings)
+
+def getUniqueColors(color):
+    &#34;&#34;&#34;Finds all unique colors within csv and returns as list&#34;&#34;&#34;
+    unique_colors = []
+    for shade in color:
+        if shade in unique_colors:
+            pass
+        else:
+            unique_colors.append(shade)
+    num_colors = len(unique_colors) - 1
+    return(unique_colors, num_colors)
+
+def findSalesTotal(sales_amount):
+    &#34;&#34;&#34;Finds total sales from csv and returns total sales as int and unique values as list&#34;&#34;&#34;
+    x = 1
+    values = []
+    sales_total = 0
+    while x &lt; len(sales_amount):
+        sale = sales_amount[x]
+        if &#39;,&#39; in sale:
+            first = sale[::-1]
+            first = first[0:3]
+            first = first[::-1]
+            sale = sale[0:-4] + first
+            values.append(int(sale))
+        sales_total += int(sale)
+        x += 1
+    return(sales_total, values)
+
+def brandPercentages(unique_brands, car_brand, values, sales_total):
+    &#34;&#34;&#34;Finds percentage of total sales for each car brang &#34;&#34;&#34;
+    c = 1
+    percentages = []
+    large_brands = []
+    other = 0
+    while c &lt; len(unique_brands):
+        m = unique_brands[c]
+        c += 1
+        d = 1
+        percent_value = 0
+        while d &lt; len(car_brand):
+            if m in car_brand[d]:
+                percent_value += values[d - 1]
+            d += 1
+        percent = percent_value / sales_total * 100
+        if percent &lt; 4:
+            other += percent
+        else:
+            percentages.append([round(percent, 2), m])
+    percentages.append([round(other, 2),&#39;Others&#39;])
+    percentages.sort()
+    percentages = percentages[::-1]
+    return(percentages)
+
+def salesByState(csv):
+    &#34;&#34;&#34;Creates bar chart showing sales per state given user inputted dataframe&#34;&#34;&#34;
+
+    # Remove Commas
+    csv[&#34;sales amount ($)&#34;] = csv[&#34;sales amount ($)&#34;].replace(&#39;,&#39;,&#39;&#39;, regex=True)
+
+    # Convert to int
+    csv[&#34;sales amount ($)&#34;] = csv[&#34;sales amount ($)&#34;].astype(str).astype(int)
+
+    # Group by State, sum sales amounts
+    sales = csv.groupby(&#39;State&#39;)[&#39;sales amount ($)&#39;].sum()
+
+    # Create barchart
+    bar = sales.plot.bar(x=&#39;State&#39;, y=&#39;sales amount ($)&#39;, rot=0)
+    bar.set_ylabel(&#39;Sales ($1000)&#39;)
+    bar.set_title(&#39;Sales per State&#39;)
+
+    # Find Max
+    maxState = sales.idxmax()
+    max = sales.max()
+    return(maxState, max)
+
+def salesByMonth(csv):
+       &#34;&#34;&#34; Creates a lineplot showing sales by month given user inputted dataframe, returns month with highest sales and amount&#34;&#34;&#34;
+
+       # Remove Commas
+       csv[&#34;sales amount ($)&#34;] = csv[&#34;sales amount ($)&#34;].replace(&#39;,&#39;,&#39;&#39;, regex=True)
+
+       # Convert to int
+       csv[&#34;sales amount ($)&#34;] = csv[&#34;sales amount ($)&#34;].astype(str).astype(int)
+
+       # Convert to datetime format
+       csv_sorted = csv.sort_values(by = &#39;contract_date&#39;)
+       csv_sorted[&#39;contract_date&#39;] = pd.to_datetime(csv_sorted[&#39;contract_date&#39;])
+
+       # Create Month and Total Columns
+       csv_sorted[&#39;Mon&#39;] = csv_sorted[&#39;contract_date&#39;].dt.strftime(&#39;%b&#39;)
+       csv_sorted[&#39;total&#39;] = csv_sorted[&#39;sales amount ($)&#39;].groupby(csv_sorted[&#39;Mon&#39;]).transform(&#39;sum&#39;)
+
+       #Create series for finding max month
+       months = csv_sorted.groupby(&#39;Mon&#39;)[&#39;sales amount ($)&#39;].sum()
+
+       # Create new dataframe
+       new = csv_sorted[[&#39;Mon&#39;,&#39;contract_date&#39;, &#39;sales amount ($)&#39;, &#39;total&#39;]]
+       # Sort by date
+       new_sorted = new.sort_values(by = &#39;contract_date&#39;)
+
+       #create line plot
+       fig, ax = plt.subplots()
+       ax.plot(new_sorted[&#39;Mon&#39;], new_sorted[&#39;total&#39;])
+
+       ax.set(xlabel=&#39;Month&#39;, ylabel=&#39;Total Sales ($10,000,000)&#39;,
+              title=&#39;Total Sales by Month&#39;)
+       ax.grid()
+
+       # Find Max
+       maxMonth = months.idxmax()
+       max = months.max()
+       return(maxMonth, max)
+
+def createPieChart(unique_brands, brands, values, sales_total):
+    &#34;&#34;&#34; Creates pie chart from list of unique brands and their related total sales &#34;&#34;&#34;
+    c = 1
+    percentages = []
+    large_brands = []
+    other = 0
+    while c &lt; len(unique_brands):
+        m = unique_brands[c]
+        c += 1
+        d = 1
+        percent_value = 0
+        while d &lt; len(brands):
+            if m in brands[d]:
+                percent_value += values[d - 1]
+            d += 1
+        percent = percent_value / sales_total * 100
+        if percent &lt; 4:
+            other += percent
+        else:
+            percentages.append([round(percent, 2), m])
+    percentages.append([round(other, 2),&#39;Others&#39;])
+    percentages.sort()
+    percentages = percentages[::-1]
+
+    c = 0
+    sizes = []
+    labels = []
+    while c &lt; len(percentages):
+        sizes.append(percentages[c][0])
+        labels.append(percentages[c][1])
+        c += 1
+        
+    colors = []
+    x = 0
+    while x &lt; len(sizes):
+        rgb = [random.random(), random.random(), random.random()]
+        d = 0
+        y = 0
+        while d &lt; len(colors):
+            if rgb[0] in colors[d]:
+                y += 1
+            if rgb[1] in colors[d]:
+                y += 1
+            if rgb[2] in colors[d]:
+                y += 1
+            if rgb[1] &lt; 0.4:
+                y += 1
+            d += 1
+        if y == 0:
+            colors.append(rgb)
+            x += 1
+        else:
+            pass
+    plt.pie(sizes, labels=labels, colors=colors, autopct=&#39;%1.1f%%&#39;, shadow=False, startangle=0)
+    plt.title(&#39;Percentage of Sale Based on Different Car Brands&#39;)
+
+def stateSalesPerMonth(csv):
+    &#34;&#34;&#34; Creates a lineplot showing sales/month by state given user inputted dataframe&#34;&#34;&#34;
+    # Create the Dataframe from the excel data
+    DataFrame = csv    
+    # Remove the commas
+    DataFrame[&#34;sales amount ($)&#34;] = DataFrame[&#34;sales amount ($)&#34;].replace(&#39;,&#39;,&#39;&#39;, regex=True)
+    
+    # Convert to int
+    DataFrame[&#34;sales amount ($)&#34;] = DataFrame[&#34;sales amount ($)&#34;].astype(str).astype(int)
+    
+    #convert to datetime format
+    DataFrame_time = DataFrame.sort_values(by=&#39;contract_date&#39;)
+    DataFrame_time[&#39;contract_date&#39;]=pd.to_datetime(DataFrame_time[&#39;contract_date&#39;])
+    
+    #create a column for months
+    DataFrame_time[&#39;Mon&#39;] = DataFrame_time[&#39;contract_date&#39;].dt.strftime(&#39;%b&#39;)
+    monthlist = [&#34;Jan&#34;, &#34;Feb&#34;, &#34;Mar&#34;, &#34;Apr&#34;, &#34;May&#34;, &#34;Jun&#34;, &#34;Jul&#34;, &#34;Aug&#34;, &#34;Sep&#34;, &#34;Oct&#34;, &#34;Nov&#34;, &#34;Dec&#34;]
+    DataFrame_time[&#39;Mon&#39;] = pd.Categorical(DataFrame_time[&#39;Mon&#39;], categories= monthlist, ordered=True)
+    
+    #create a column for state sales per month
+    StateSalesMonth = DataFrame_time.groupby([&#39;State&#39;,&#39;Mon&#39;])[&#39;sales amount ($)&#39;].sum()
+    TexasLine = StateSalesMonth[&#39;Texas&#39;]
+    FloridaLine = StateSalesMonth[&#39;Florida&#39;]
+    CaliforniaLine = StateSalesMonth[&#39;California&#39;]
+    NevadaLine = StateSalesMonth[&#39;Nevada&#39;]
+    OhioLine = StateSalesMonth[&#39;Ohio&#39;]
+    
+    # Group by months, sales
+    month = DataFrame_time.groupby(&#39;Mon&#39;)[&#39;sales amount ($)&#39;].sum()
+    StateSales = DataFrame_time.groupby(&#39;State&#39;)[&#39;sales amount ($)&#39;].sum()
+    
+    # Create the linechart
+    Line1 = FloridaLine.plot()
+    Line2 = OhioLine.plot()
+    Line3 = TexasLine.plot()
+    line4 = CaliforniaLine.plot()
+    Line5 = NevadaLine.plot()
+    
+    # Create the legend
+    green_patch = patches.Patch(color=&#39;green&#39;, label =&#39;Texas&#39;)
+    red_patch = patches.Patch(color=&#39;red&#39;, label =&#39;California&#39;)
+    blue_patch = patches.Patch(color=&#39;blue&#39;, label =&#39;Florida&#39;)
+    orange_patch = patches.Patch(color=&#39;orange&#39;, label =&#39;Ohio&#39;)
+    purple_patch = patches.Patch(color=&#39;purple&#39;, label =&#39;Nevada&#39;)
+    plt.legend(handles=[green_patch,red_patch,blue_patch,orange_patch,purple_patch])
+    
+    &#39;&#39;&#39;Create the axis labels&#39;&#39;&#39;
+    x_labels= [&#34;Jan&#34;, &#34;Feb&#34;, &#34;Mar&#34;, &#34;Apr&#34;, &#34;May&#34;, &#34;Jun&#34;, &#34;Jul&#34;, &#34;Aug&#34;, &#34;Sep&#34;, &#34;Oct&#34;, &#34;Nov&#34;, &#34;Dec&#34;]
+    plt.xticks(np.arange(len(x_labels)), x_labels, rotation = 90)
+    plt.ylim([0,15000000])
+    plt.xlabel(&#34;Month&#34;)
+    plt.ylabel(&#34;Amount of Sales&#34;)
+    plt.title(&#34;Amount of sales in different months in each state&#34;)
+
+def main():
+    path = &#39;C:/MyFiles/Repo/Programming1/2019_car_sale.csv&#39;
+
+    # Get Lists for data analysus
+    data_set, car_model, contract_date, car_brand, state, car_safety_rating, sales_amount, color = seperateFile(path)
+
+    # Find Unique values
+    unique_models, num_models = getUniqueModels(car_model)
+    unique_brands, num_brands = getUniqueBrands(car_brand)
+    unique_ratings, num_ratings = getUniqueRatings(car_safety_rating)
+    unique_colors, num_colors = getUniqueColors(color)
+
+    deals = len(data_set) - 1
+    sales_total, values = findSalesTotal(sales_amount)
+    percentages = brandPercentages(unique_brands,car_brand, values, sales_total)
+
+    # Bar Chart
+    df = pd.read_csv(path, delimiter= &#39;,&#39;)
+    maxState,max1 = salesByState(df)
+    bar = salesByState(df)
+    plt.show(bar)
+
+    # Line plot 1
+    maxMonth, max2 = salesByMonth(df)
+    line1 = (salesByMonth(df))
+    plt.show(line1)
+
+    # Pie Chart
+    pie = createPieChart(unique_brands, car_brand, values, sales_total)
+    plt.show(pie)
+
+    # Line plot 2
+    line2 = stateSalesPerMonth(df)
+    plt.show(line2)
+
+    print(&#39;========Dataset Details========&#39;)
+    print()
+    print(f&#39;Total number of deals: {deals}&#39;)
+    print(f&#39;Number of different car models: {num_models}&#39;)
+    print(f&#39;Number of different car brands: {num_brands}&#39;)
+    print(f&#39;Number of different car safety ratings: {num_ratings}&#39;)
+    print(f&#39;Number of different car colors: {num_colors}&#39;)
+    print(f&#39;Total amount of sale: {sales_total}&#39;)
+    print()
+    print(&#39;===============================&#39;)
+    print()
+    print(f&#34;The state with the highest sales is {maxState} at ${max1}&#34;)
+    print(f&#34;The month with the highest sales is {maxMonth} at ${max2}&#34;)
+    print()
+    print(&#39;========Amount of Sale Based on Car Brands========&#39;)
+    print()
+    c = 0
+    while c &lt; len(percentages):
+        print(f&#39;{percentages[c][1]} : {percentages[c][0]}&#39;)
+        c += 1
+    print()
+    print(&#39;===============================&#39;)
+
+main()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="project.brandPercentages"><code class="name flex">
+<span>def <span class="ident">brandPercentages</span></span>(<span>unique_brands, car_brand, values, sales_total)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds percentage of total sales for each car brang</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def brandPercentages(unique_brands, car_brand, values, sales_total):
+    &#34;&#34;&#34;Finds percentage of total sales for each car brang &#34;&#34;&#34;
+    c = 1
+    percentages = []
+    large_brands = []
+    other = 0
+    while c &lt; len(unique_brands):
+        m = unique_brands[c]
+        c += 1
+        d = 1
+        percent_value = 0
+        while d &lt; len(car_brand):
+            if m in car_brand[d]:
+                percent_value += values[d - 1]
+            d += 1
+        percent = percent_value / sales_total * 100
+        if percent &lt; 4:
+            other += percent
+        else:
+            percentages.append([round(percent, 2), m])
+    percentages.append([round(other, 2),&#39;Others&#39;])
+    percentages.sort()
+    percentages = percentages[::-1]
+    return(percentages)</code></pre>
+</details>
+</dd>
+<dt id="project.createPieChart"><code class="name flex">
+<span>def <span class="ident">createPieChart</span></span>(<span>unique_brands, brands, values, sales_total)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates pie chart from list of unique brands and their related total sales</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def createPieChart(unique_brands, brands, values, sales_total):
+    &#34;&#34;&#34; Creates pie chart from list of unique brands and their related total sales &#34;&#34;&#34;
+    c = 1
+    percentages = []
+    large_brands = []
+    other = 0
+    while c &lt; len(unique_brands):
+        m = unique_brands[c]
+        c += 1
+        d = 1
+        percent_value = 0
+        while d &lt; len(brands):
+            if m in brands[d]:
+                percent_value += values[d - 1]
+            d += 1
+        percent = percent_value / sales_total * 100
+        if percent &lt; 4:
+            other += percent
+        else:
+            percentages.append([round(percent, 2), m])
+    percentages.append([round(other, 2),&#39;Others&#39;])
+    percentages.sort()
+    percentages = percentages[::-1]
+
+    c = 0
+    sizes = []
+    labels = []
+    while c &lt; len(percentages):
+        sizes.append(percentages[c][0])
+        labels.append(percentages[c][1])
+        c += 1
+        
+    colors = []
+    x = 0
+    while x &lt; len(sizes):
+        rgb = [random.random(), random.random(), random.random()]
+        d = 0
+        y = 0
+        while d &lt; len(colors):
+            if rgb[0] in colors[d]:
+                y += 1
+            if rgb[1] in colors[d]:
+                y += 1
+            if rgb[2] in colors[d]:
+                y += 1
+            if rgb[1] &lt; 0.4:
+                y += 1
+            d += 1
+        if y == 0:
+            colors.append(rgb)
+            x += 1
+        else:
+            pass
+    plt.pie(sizes, labels=labels, colors=colors, autopct=&#39;%1.1f%%&#39;, shadow=False, startangle=0)
+    plt.title(&#39;Percentage of Sale Based on Different Car Brands&#39;)</code></pre>
+</details>
+</dd>
+<dt id="project.findSalesTotal"><code class="name flex">
+<span>def <span class="ident">findSalesTotal</span></span>(<span>sales_amount)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds total sales from csv and returns total sales as int and unique values as list</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def findSalesTotal(sales_amount):
+    &#34;&#34;&#34;Finds total sales from csv and returns total sales as int and unique values as list&#34;&#34;&#34;
+    x = 1
+    values = []
+    sales_total = 0
+    while x &lt; len(sales_amount):
+        sale = sales_amount[x]
+        if &#39;,&#39; in sale:
+            first = sale[::-1]
+            first = first[0:3]
+            first = first[::-1]
+            sale = sale[0:-4] + first
+            values.append(int(sale))
+        sales_total += int(sale)
+        x += 1
+    return(sales_total, values)</code></pre>
+</details>
+</dd>
+<dt id="project.getUniqueBrands"><code class="name flex">
+<span>def <span class="ident">getUniqueBrands</span></span>(<span>car_brand)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds all unique car brands within csv and returns as list</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getUniqueBrands(car_brand):
+    &#34;&#34;&#34;Finds all unique car brands within csv and returns as list&#34;&#34;&#34;
+    unique_brands = []
+    for brand in car_brand:
+        if brand in unique_brands:
+            pass
+        else:
+            unique_brands.append(brand)
+    num_brands = len(unique_brands) - 1
+    return(unique_brands, num_brands)</code></pre>
+</details>
+</dd>
+<dt id="project.getUniqueColors"><code class="name flex">
+<span>def <span class="ident">getUniqueColors</span></span>(<span>color)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds all unique colors within csv and returns as list</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getUniqueColors(color):
+    &#34;&#34;&#34;Finds all unique colors within csv and returns as list&#34;&#34;&#34;
+    unique_colors = []
+    for shade in color:
+        if shade in unique_colors:
+            pass
+        else:
+            unique_colors.append(shade)
+    num_colors = len(unique_colors) - 1
+    return(unique_colors, num_colors)</code></pre>
+</details>
+</dd>
+<dt id="project.getUniqueModels"><code class="name flex">
+<span>def <span class="ident">getUniqueModels</span></span>(<span>car_model)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds all unique models within csv and returns as list</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getUniqueModels(car_model):
+    &#34;&#34;&#34;Finds all unique models within csv and returns as list&#34;&#34;&#34;
+    unique_models = []
+    for model in car_model:
+        if model in unique_models:
+            pass
+        else:
+            unique_models.append(model)
+    num_models = len(unique_models) - 1
+    return(unique_models, num_models)</code></pre>
+</details>
+</dd>
+<dt id="project.getUniqueRatings"><code class="name flex">
+<span>def <span class="ident">getUniqueRatings</span></span>(<span>car_safety_rating)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds all unique ratings within csv and returns as list</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getUniqueRatings(car_safety_rating):
+    &#34;&#34;&#34;Finds all unique ratings within csv and returns as list&#34;&#34;&#34;
+    unique_ratings = []    
+    for rating in car_safety_rating:
+        if rating in unique_ratings:
+            pass
+        else:
+            unique_ratings.append(rating)
+    num_ratings = len(unique_ratings) - 1
+    return(unique_ratings, num_ratings)</code></pre>
+</details>
+</dd>
+<dt id="project.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def main():
+    path = &#39;C:/MyFiles/Repo/Programming1/2019_car_sale.csv&#39;
+
+    # Get Lists for data analysus
+    data_set, car_model, contract_date, car_brand, state, car_safety_rating, sales_amount, color = seperateFile(path)
+
+    # Find Unique values
+    unique_models, num_models = getUniqueModels(car_model)
+    unique_brands, num_brands = getUniqueBrands(car_brand)
+    unique_ratings, num_ratings = getUniqueRatings(car_safety_rating)
+    unique_colors, num_colors = getUniqueColors(color)
+
+    deals = len(data_set) - 1
+    sales_total, values = findSalesTotal(sales_amount)
+    percentages = brandPercentages(unique_brands,car_brand, values, sales_total)
+
+    # Bar Chart
+    df = pd.read_csv(path, delimiter= &#39;,&#39;)
+    maxState,max1 = salesByState(df)
+    bar = salesByState(df)
+    plt.show(bar)
+
+    # Line plot 1
+    maxMonth, max2 = salesByMonth(df)
+    line1 = (salesByMonth(df))
+    plt.show(line1)
+
+    # Pie Chart
+    pie = createPieChart(unique_brands, car_brand, values, sales_total)
+    plt.show(pie)
+
+    # Line plot 2
+    line2 = stateSalesPerMonth(df)
+    plt.show(line2)
+
+    print(&#39;========Dataset Details========&#39;)
+    print()
+    print(f&#39;Total number of deals: {deals}&#39;)
+    print(f&#39;Number of different car models: {num_models}&#39;)
+    print(f&#39;Number of different car brands: {num_brands}&#39;)
+    print(f&#39;Number of different car safety ratings: {num_ratings}&#39;)
+    print(f&#39;Number of different car colors: {num_colors}&#39;)
+    print(f&#39;Total amount of sale: {sales_total}&#39;)
+    print()
+    print(&#39;===============================&#39;)
+    print()
+    print(f&#34;The state with the highest sales is {maxState} at ${max1}&#34;)
+    print(f&#34;The month with the highest sales is {maxMonth} at ${max2}&#34;)
+    print()
+    print(&#39;========Amount of Sale Based on Car Brands========&#39;)
+    print()
+    c = 0
+    while c &lt; len(percentages):
+        print(f&#39;{percentages[c][1]} : {percentages[c][0]}&#39;)
+        c += 1
+    print()
+    print(&#39;===============================&#39;)</code></pre>
+</details>
+</dd>
+<dt id="project.salesByMonth"><code class="name flex">
+<span>def <span class="ident">salesByMonth</span></span>(<span>csv)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates a lineplot showing sales by month given user inputted dataframe, returns month with highest sales and amount</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def salesByMonth(csv):
+       &#34;&#34;&#34; Creates a lineplot showing sales by month given user inputted dataframe, returns month with highest sales and amount&#34;&#34;&#34;
+
+       # Remove Commas
+       csv[&#34;sales amount ($)&#34;] = csv[&#34;sales amount ($)&#34;].replace(&#39;,&#39;,&#39;&#39;, regex=True)
+
+       # Convert to int
+       csv[&#34;sales amount ($)&#34;] = csv[&#34;sales amount ($)&#34;].astype(str).astype(int)
+
+       # Convert to datetime format
+       csv_sorted = csv.sort_values(by = &#39;contract_date&#39;)
+       csv_sorted[&#39;contract_date&#39;] = pd.to_datetime(csv_sorted[&#39;contract_date&#39;])
+
+       # Create Month and Total Columns
+       csv_sorted[&#39;Mon&#39;] = csv_sorted[&#39;contract_date&#39;].dt.strftime(&#39;%b&#39;)
+       csv_sorted[&#39;total&#39;] = csv_sorted[&#39;sales amount ($)&#39;].groupby(csv_sorted[&#39;Mon&#39;]).transform(&#39;sum&#39;)
+
+       #Create series for finding max month
+       months = csv_sorted.groupby(&#39;Mon&#39;)[&#39;sales amount ($)&#39;].sum()
+
+       # Create new dataframe
+       new = csv_sorted[[&#39;Mon&#39;,&#39;contract_date&#39;, &#39;sales amount ($)&#39;, &#39;total&#39;]]
+       # Sort by date
+       new_sorted = new.sort_values(by = &#39;contract_date&#39;)
+
+       #create line plot
+       fig, ax = plt.subplots()
+       ax.plot(new_sorted[&#39;Mon&#39;], new_sorted[&#39;total&#39;])
+
+       ax.set(xlabel=&#39;Month&#39;, ylabel=&#39;Total Sales ($10,000,000)&#39;,
+              title=&#39;Total Sales by Month&#39;)
+       ax.grid()
+
+       # Find Max
+       maxMonth = months.idxmax()
+       max = months.max()
+       return(maxMonth, max)</code></pre>
+</details>
+</dd>
+<dt id="project.salesByState"><code class="name flex">
+<span>def <span class="ident">salesByState</span></span>(<span>csv)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates bar chart showing sales per state given user inputted dataframe</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def salesByState(csv):
+    &#34;&#34;&#34;Creates bar chart showing sales per state given user inputted dataframe&#34;&#34;&#34;
+
+    # Remove Commas
+    csv[&#34;sales amount ($)&#34;] = csv[&#34;sales amount ($)&#34;].replace(&#39;,&#39;,&#39;&#39;, regex=True)
+
+    # Convert to int
+    csv[&#34;sales amount ($)&#34;] = csv[&#34;sales amount ($)&#34;].astype(str).astype(int)
+
+    # Group by State, sum sales amounts
+    sales = csv.groupby(&#39;State&#39;)[&#39;sales amount ($)&#39;].sum()
+
+    # Create barchart
+    bar = sales.plot.bar(x=&#39;State&#39;, y=&#39;sales amount ($)&#39;, rot=0)
+    bar.set_ylabel(&#39;Sales ($1000)&#39;)
+    bar.set_title(&#39;Sales per State&#39;)
+
+    # Find Max
+    maxState = sales.idxmax()
+    max = sales.max()
+    return(maxState, max)</code></pre>
+</details>
+</dd>
+<dt id="project.seperateFile"><code class="name flex">
+<span>def <span class="ident">seperateFile</span></span>(<span>path)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Takes path as input and seperates columns into seperate</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def seperateFile(path):
+    &#34;&#34;&#34;Takes path as input and seperates columns into seperate&#34;&#34;&#34;
+    with open(path, &#39;r&#39;) as csvfile:
+        data_file = csv.reader(csvfile)
+        
+        data_set = []
+        car_model = []
+        contract_date = []
+        car_brand = []
+        state = []
+        car_safety_rating = []
+        sales_amount = []
+        color = []
+        
+        for line in data_file:
+            data_set.append(line)
+            car_model.append(line[0])
+            contract_date.append(line[1])
+            car_brand.append(line[2])
+            state.append(line[3])
+            car_safety_rating.append(line[4])
+            sales_amount.append(line[5])
+            color.append(line[6])
+
+    return (data_set, car_model, contract_date, car_brand, state, car_safety_rating, sales_amount, color)</code></pre>
+</details>
+</dd>
+<dt id="project.stateSalesPerMonth"><code class="name flex">
+<span>def <span class="ident">stateSalesPerMonth</span></span>(<span>csv)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates a lineplot showing sales/month by state given user inputted dataframe</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def stateSalesPerMonth(csv):
+    &#34;&#34;&#34; Creates a lineplot showing sales/month by state given user inputted dataframe&#34;&#34;&#34;
+    # Create the Dataframe from the excel data
+    DataFrame = csv    
+    # Remove the commas
+    DataFrame[&#34;sales amount ($)&#34;] = DataFrame[&#34;sales amount ($)&#34;].replace(&#39;,&#39;,&#39;&#39;, regex=True)
+    
+    # Convert to int
+    DataFrame[&#34;sales amount ($)&#34;] = DataFrame[&#34;sales amount ($)&#34;].astype(str).astype(int)
+    
+    #convert to datetime format
+    DataFrame_time = DataFrame.sort_values(by=&#39;contract_date&#39;)
+    DataFrame_time[&#39;contract_date&#39;]=pd.to_datetime(DataFrame_time[&#39;contract_date&#39;])
+    
+    #create a column for months
+    DataFrame_time[&#39;Mon&#39;] = DataFrame_time[&#39;contract_date&#39;].dt.strftime(&#39;%b&#39;)
+    monthlist = [&#34;Jan&#34;, &#34;Feb&#34;, &#34;Mar&#34;, &#34;Apr&#34;, &#34;May&#34;, &#34;Jun&#34;, &#34;Jul&#34;, &#34;Aug&#34;, &#34;Sep&#34;, &#34;Oct&#34;, &#34;Nov&#34;, &#34;Dec&#34;]
+    DataFrame_time[&#39;Mon&#39;] = pd.Categorical(DataFrame_time[&#39;Mon&#39;], categories= monthlist, ordered=True)
+    
+    #create a column for state sales per month
+    StateSalesMonth = DataFrame_time.groupby([&#39;State&#39;,&#39;Mon&#39;])[&#39;sales amount ($)&#39;].sum()
+    TexasLine = StateSalesMonth[&#39;Texas&#39;]
+    FloridaLine = StateSalesMonth[&#39;Florida&#39;]
+    CaliforniaLine = StateSalesMonth[&#39;California&#39;]
+    NevadaLine = StateSalesMonth[&#39;Nevada&#39;]
+    OhioLine = StateSalesMonth[&#39;Ohio&#39;]
+    
+    # Group by months, sales
+    month = DataFrame_time.groupby(&#39;Mon&#39;)[&#39;sales amount ($)&#39;].sum()
+    StateSales = DataFrame_time.groupby(&#39;State&#39;)[&#39;sales amount ($)&#39;].sum()
+    
+    # Create the linechart
+    Line1 = FloridaLine.plot()
+    Line2 = OhioLine.plot()
+    Line3 = TexasLine.plot()
+    line4 = CaliforniaLine.plot()
+    Line5 = NevadaLine.plot()
+    
+    # Create the legend
+    green_patch = patches.Patch(color=&#39;green&#39;, label =&#39;Texas&#39;)
+    red_patch = patches.Patch(color=&#39;red&#39;, label =&#39;California&#39;)
+    blue_patch = patches.Patch(color=&#39;blue&#39;, label =&#39;Florida&#39;)
+    orange_patch = patches.Patch(color=&#39;orange&#39;, label =&#39;Ohio&#39;)
+    purple_patch = patches.Patch(color=&#39;purple&#39;, label =&#39;Nevada&#39;)
+    plt.legend(handles=[green_patch,red_patch,blue_patch,orange_patch,purple_patch])
+    
+    &#39;&#39;&#39;Create the axis labels&#39;&#39;&#39;
+    x_labels= [&#34;Jan&#34;, &#34;Feb&#34;, &#34;Mar&#34;, &#34;Apr&#34;, &#34;May&#34;, &#34;Jun&#34;, &#34;Jul&#34;, &#34;Aug&#34;, &#34;Sep&#34;, &#34;Oct&#34;, &#34;Nov&#34;, &#34;Dec&#34;]
+    plt.xticks(np.arange(len(x_labels)), x_labels, rotation = 90)
+    plt.ylim([0,15000000])
+    plt.xlabel(&#34;Month&#34;)
+    plt.ylabel(&#34;Amount of Sales&#34;)
+    plt.title(&#34;Amount of sales in different months in each state&#34;)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="two-column">
+<li><code><a title="project.brandPercentages" href="#project.brandPercentages">brandPercentages</a></code></li>
+<li><code><a title="project.createPieChart" href="#project.createPieChart">createPieChart</a></code></li>
+<li><code><a title="project.findSalesTotal" href="#project.findSalesTotal">findSalesTotal</a></code></li>
+<li><code><a title="project.getUniqueBrands" href="#project.getUniqueBrands">getUniqueBrands</a></code></li>
+<li><code><a title="project.getUniqueColors" href="#project.getUniqueColors">getUniqueColors</a></code></li>
+<li><code><a title="project.getUniqueModels" href="#project.getUniqueModels">getUniqueModels</a></code></li>
+<li><code><a title="project.getUniqueRatings" href="#project.getUniqueRatings">getUniqueRatings</a></code></li>
+<li><code><a title="project.main" href="#project.main">main</a></code></li>
+<li><code><a title="project.salesByMonth" href="#project.salesByMonth">salesByMonth</a></code></li>
+<li><code><a title="project.salesByState" href="#project.salesByState">salesByState</a></code></li>
+<li><code><a title="project.seperateFile" href="#project.seperateFile">seperateFile</a></code></li>
+<li><code><a title="project.stateSalesPerMonth" href="#project.stateSalesPerMonth">stateSalesPerMonth</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
